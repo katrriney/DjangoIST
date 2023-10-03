@@ -29,3 +29,10 @@ def categories_sl(request, catid):
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound(f'<h1>Статьи не найдена</h1>')
+
+
+def year_archive(request, year):
+    if int(year) > 2023 or  int(year) < 2000:
+        raise Http404()
+
+    return HttpResponse(f'<h1>В этот год случилось  {year}</h1>')
