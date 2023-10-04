@@ -9,7 +9,7 @@ from django.shortcuts import render
 def index(request):
     if (request.GET):
         print(request.GET)
-    return HttpResponse('главная страница women')
+    return HttpResponse('')
 
 
 def categories(request):
