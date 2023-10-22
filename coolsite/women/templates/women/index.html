@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<h1>{{title }}</h1>
+<p>{{audi}}</p>
+<br>
+{{slov.key1}}
+<p>
+{{int}}
+<h3>
+    {{double}}
+</h3>
+<p>
+    {{bool}}
+</p>
+
+<ul>
+    {% for st in joke %}
+    <li><h2>{{st.brend}}</h2>
+    <p>{{st.model}}</p>
+        {% if not forloop.last %}
+ <hr>
+{% endif %}
+    </li>
+    {%endfor%}
+</ul>
+<hr color = "grey" size="16",>
+<ul>
+
+    {% for st in joke %}
+    {% if  st.sold is True  %}
+    <h2>В наличии</h2>
+    <p>{{ st.brend }}</p>
+    <hr color = "blue">
+    {% elif  st.sold is False  %}
+    <h2>Продано</h2>
+    <p>{{ st.brend }}</p>
+
+<hr color = "blue">
+    {% endif %}
+{%endfor%}
+</ul>
+
+</body>
+</html>
