@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<ul>
+    {% for m in menu %}
+    <li>
+        <a href="{% url m.url_n %}"> {{m.title}} </a>
+    </li>
+    {% endfor %}
+</ul>
+<h1>{{menu.5.title }}</h1>
+<ul>
+    {% for st in joke %}
+    <li><h2>{{st.brend}}</h2>
+    <p>{{st.model}}</p>
+        {% if not forloop.last %}
+ <hr>
+{% endif %}
+    </li>
+    {%endfor%}
+</ul>
+</body>
+</html>

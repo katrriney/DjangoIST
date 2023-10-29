@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    {% for m in menu %}
+    <li>
+        <a href="{% url m.url_n %}"> {{m.title}} </a>
+
+    </li>
+    {%endfor%}
+</ul>
+<h1>{{menu.6.title}}</h1>
+<ul>
+    {% for st in date %}
+    <li><h2>{{st.FIO}}</h2>
+        <p>{{st.HB}}</p>
+    </li>
+    {%endfor%}
+</ul>
+
+</body>
+</html>
